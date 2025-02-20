@@ -34,7 +34,10 @@ faqsWrapper.addEventListener("click", (e) => {
 });
 
 function toggleFaq(targetEl) {
-	if (targetEl.classList.contains("faq")) {
+	faqs.forEach((faq) => {
+		if (targetEl !== faq) {
+			faq.classList.remove("active");
+		}
 		targetEl.classList.toggle("active");
-	}
+	});
 }

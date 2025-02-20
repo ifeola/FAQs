@@ -45,22 +45,25 @@ ul {
 	border-radius: 8px;
 	background-color: #00081a;
 	border: 1px solid rgba(255, 255, 255, 0.24);
-	transition: grid-template-rows 0.3s ease-in;
+	transition: 1s ease-in;
 }
 
 .faq * {
 	pointer-events: none;
 }
 
-.faq__body {
+.faq .faq__body {
 	display: grid;
-	grid-template-rows: 0;
+	grid-template-rows: 0fr;
+	transition: 0.3s ease-in;
+}
+
+.faq .faq__body > div {
 	overflow: hidden;
 }
 
 .faq__body p {
 	padding-block-start: 1rem;
-	/* transition: grid-template-rows 0.3s ease-in; */
 }
 
 .faq.active .faq__body {
